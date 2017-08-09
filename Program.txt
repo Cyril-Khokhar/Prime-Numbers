@@ -1,0 +1,55 @@
+
+namespace PrimeNumProject
+
+{
+
+	public class Program
+
+	{
+
+	public static void Main()
+
+	{
+		primeNumbers();
+	}
+
+ 	public static void primeNumbers()
+
+        {
+            int n = 100;    //initializing to 100
+
+            for (int i = 1; i <= n; i++)      starting loop from 1 to 100
+
+            {
+                if (i == 1)
+                {
+
+			// do nothing when it is 1 because 1 is not a prime number
+                }
+
+                else if (i == 2 || i == 3 || i == 5 || i == 7)
+
+                {
+                    Console.WriteLine(i);   
+                }
+
+                else if (i >= 10)
+
+                {
+                    if ((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0) && (i % 9 != 0))
+			//Checking two digits number if they are not completely divisible by 2,3,5,7,9 
+			
+                    {
+
+                        Console.WriteLine(i);
+
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
